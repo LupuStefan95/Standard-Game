@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private bool isGrounded = true;
     private Rigidbody rb;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -52,6 +53,13 @@ public class PlayerMovement : MonoBehaviour
     }
     void OnCollisionEnter(Collision collision)
     {
+        
+        if (collision.transform.gameObject.tag.Equals("InstantiateCube") == true)
+        {
+            SceneManager.LoadScene(0);
+
+        }
+
         if (collision.gameObject.CompareTag("Ground"))
         {
             isGrounded = true;
@@ -61,6 +69,7 @@ public class PlayerMovement : MonoBehaviour
 
     void OnCollisionExit(Collision collision)
     {
+       
         if (collision.gameObject.CompareTag("Ground"))
         {
             isGrounded = false;

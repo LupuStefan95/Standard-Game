@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class InstantiateObject : MonoBehaviour
 {
-    public GameObject prefab;
-    public int xPos;
-    public int zPos;
-    public int prefabsCount = 0;
+    [SerializeField]
+     GameObject prefab;
+    [SerializeField]
+    int xPos;
+    [SerializeField]
+    int zPos;
+ 
+    
 
     // Start is called before the first frame update
     void Start()
@@ -17,15 +21,13 @@ public class InstantiateObject : MonoBehaviour
 
     IEnumerator PrefabDrop()
     {
-        if (prefabsCount < 10)
-        {
+       
             xPos = Random.Range(-45, 45);
             zPos = Random.Range(-45, 45);
-            yield return new WaitForSeconds(5);
-            Instantiate(prefab, new Vector3(xPos, 2, zPos), Quaternion.identity);
-            yield return new WaitForSeconds(5);
-            Destroy(prefab);
-            //prefabsCount += 1;
-        }
+            yield return new WaitForSeconds(2);
+            Instantiate(prefab, new Vector3(xPos, 15, zPos), Quaternion.identity);
+            yield return new WaitForSeconds(2);
+        Destroy(prefab);
+                   
     }
 }
