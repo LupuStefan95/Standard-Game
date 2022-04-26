@@ -22,13 +22,7 @@ public class PlayerMovement : MonoBehaviour
        rb = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-       
-    }
-
-    private void FixedUpdate()
+    private void Update()
     {
         MovePlayer();
     }
@@ -39,12 +33,11 @@ public class PlayerMovement : MonoBehaviour
         float zAxis = Input.GetAxis("Vertical");
         bool jump = Input.GetKeyDown(KeyCode.Space);
         bool counterJump = Input.GetKeyDown(KeyCode.LeftControl);
+        
         if (rb.velocity.magnitude < topSpeed)
         {
             rb.AddForce(moveSpeed * Time.deltaTime * new Vector3(xAxis, 0, zAxis), ForceMode.Impulse);
         }
-    
-        //transform.Translate(moveSpeed * Time.deltaTime * new Vector3(xAxis, 0, zAxis));
 
         if (jump && isGrounded)
         {
