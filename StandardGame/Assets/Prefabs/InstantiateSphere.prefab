@@ -111,7 +111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 7537813633808315737}
   height: 30
-  delaySeconds: 4
+  delaySeconds: 5
 --- !u!54 &7537813633808315740
 Rigidbody:
   m_ObjectHideFlags: 0
