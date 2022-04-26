@@ -7,11 +7,15 @@ public class InstantiateObject : MonoBehaviour
     [SerializeField]
      GameObject prefab;
     [SerializeField]
-    int xPos;
+    int height;
     [SerializeField]
+    int delaySeconds;
+    int xPos;
     int zPos;
- 
+    int yPos;
+   
     
+
 
     // Start is called before the first frame update
     void Start()
@@ -24,9 +28,13 @@ public class InstantiateObject : MonoBehaviour
        
             xPos = Random.Range(-45, 45);
             zPos = Random.Range(-45, 45);
-            yield return new WaitForSeconds(2);
-            Instantiate(prefab, new Vector3(xPos, 15, zPos), Quaternion.identity);
-            yield return new WaitForSeconds(2);
+            yPos = Random.Range(-360, 360);
+            yield return new WaitForSeconds(delaySeconds);
+       
+        
+            Instantiate(prefab, new Vector3(xPos, height, zPos), Quaternion.Euler(xPos, yPos, zPos));
+           // Instantiate(prefab, new Vector3(xPos, height, zPos), Quaternion.identity);
+            yield return new WaitForSeconds(delaySeconds);
         Destroy(prefab);
                    
     }
