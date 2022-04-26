@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - InstantiateCube
+  - PlayerKiller
   layers:
   - Default
   - TransparentFX

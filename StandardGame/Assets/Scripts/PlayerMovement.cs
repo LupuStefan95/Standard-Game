@@ -54,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         
-        if (collision.transform.gameObject.tag.Equals("InstantiateCube") == true)
+        if (collision.transform.gameObject.tag.Equals("PlayerKiller") == true)
         {
             SceneManager.LoadScene(0);
 
