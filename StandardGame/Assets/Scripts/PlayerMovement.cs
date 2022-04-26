@@ -5,11 +5,17 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField]
-    float moveSpeed = 10f;
+    float topSpeed = 7f;
+    [SerializeField]
+    float moveSpeed = 20f;
+    [SerializeField]
     float jumpSpeed = 10f;
+    [SerializeField]
     float stopJumpSpeed = 30f;
-    private Rigidbody rb;
+    [SerializeField]
     private bool isGrounded = true;
+    private Rigidbody rb;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -19,12 +25,26 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       
+    }
+
+    private void FixedUpdate()
+    {
+        MovePlayer();
+    }
+
+    void MovePlayer()
+    {
         float xAxis = Input.GetAxis("Horizontal");
         float zAxis = Input.GetAxis("Vertical");
         bool jump = Input.GetKeyDown(KeyCode.Space);
         bool counterJump = Input.GetKeyDown(KeyCode.LeftControl);
-
-        transform.Translate(new Vector3(xAxis, 0, zAxis) * moveSpeed * Time.deltaTime);
+        if (rb.velocity.magnitude < topSpeed)
+        {
+            rb.AddForce(moveSpeed * Time.deltaTime * new Vector3(xAxis, 0, zAxis), ForceMode.Impulse);
+        }
+    
+        //transform.Translate(moveSpeed * Time.deltaTime * new Vector3(xAxis, 0, zAxis));
 
         if (jump && isGrounded)
         {
