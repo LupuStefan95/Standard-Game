@@ -26,6 +26,9 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         MovePlayer();
+        if(transform.position.y < 0 ){
+            SceneManager.LoadScene(0);
+        }
     }
 
     void MovePlayer()

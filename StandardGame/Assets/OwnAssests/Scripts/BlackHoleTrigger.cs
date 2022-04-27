@@ -12,4 +12,6 @@ public class BlackHoleTrigger : MonoBehaviour
             SceneManager.LoadScene(0);
         }
     }
+
+    
 }
