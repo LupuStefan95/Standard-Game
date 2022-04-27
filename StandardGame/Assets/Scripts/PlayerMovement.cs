@@ -54,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         
-        if (collision.transform.gameObject.tag.Equals("PlayerKiller") == true)
+        if (collision.gameObject.CompareTag("PlayerKiller"))
         {
             SceneManager.LoadScene(0);
 

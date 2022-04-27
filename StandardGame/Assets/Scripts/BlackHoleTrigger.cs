@@ -7,7 +7,7 @@ public class BlackHoleTrigger : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if (other.transform.gameObject.tag.Equals("Player") == true)
+        if (other.gameObject.CompareTag("Player"))
         {
             SceneManager.LoadScene(0);
         }
