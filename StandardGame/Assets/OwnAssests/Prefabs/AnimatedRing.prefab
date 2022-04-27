@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2931380735808530393}
   m_Layer: 0
   m_Name: AnimatedRing
-  m_TagString: PlayerKiller
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -102,20 +102,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2122407703971446734, guid: 972359ee0b7b85f4c963983e63d7dfa9, type: 3}
   m_PrefabInstance: {fileID: 240471945620059354}
   m_PrefabAsset: {fileID: 0}
---- !u!64 &791451087027458051
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2171330380955899700}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300004, guid: ccb151eac4280a94c95575e12e56865a, type: 3}
 --- !u!111 &2931380737395522440
 Animation:
   m_ObjectHideFlags: 0
@@ -163,3 +149,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3863ea47403cdf4cbeface8b711cda0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!64 &5738200872523943839
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2171330380955899700}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300004, guid: ccb151eac4280a94c95575e12e56865a, type: 3}
