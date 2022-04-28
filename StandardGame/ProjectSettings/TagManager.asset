@@ -7,6 +7,7 @@ TagManager:
   - Ground
   - InstantiateCube
   - PlayerKiller
+  - GameMusic
   layers:
   - Default
   - TransparentFX
