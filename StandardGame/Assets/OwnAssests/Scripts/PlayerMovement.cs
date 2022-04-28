@@ -33,11 +33,17 @@ public class PlayerMovement : MonoBehaviour
 
     void MovePlayer()
     {
+        bool exitMenu = Input.GetKeyDown(KeyCode.Escape);
         float xAxis = Input.GetAxis("Horizontal");
         float zAxis = Input.GetAxis("Vertical");
         bool jump = Input.GetKeyDown(KeyCode.Space);
         bool counterJump = Input.GetKeyDown(KeyCode.LeftControl);
-        
+
+        if (exitMenu)
+        {
+            SceneManager.LoadScene(0);
+        }
+
         if (rb.velocity.magnitude < topSpeed)
         {
             rb.AddForce(moveSpeed * Time.deltaTime * new Vector3(xAxis, 0, zAxis), ForceMode.Impulse);

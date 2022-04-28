@@ -1,5 +1,13 @@
 sceneSetups:
-- path: Assets/OwnAssests/Scenes/SampleScene.unity
+- path: Assets/OwnAssests/Scenes/SampleSceneEasy.unity
+  isLoaded: 0
+  isActive: 0
+  isSubScene: 0
+- path: Assets/OwnAssests/Scenes/SampleSceneHard.unity
+  isLoaded: 0
+  isActive: 0
+  isSubScene: 0
+- path: Assets/OwnAssests/Scenes/MainMenuScene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
