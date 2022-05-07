@@ -10,7 +10,6 @@ public class AnimatedRing : MonoBehaviour
     {
         int rn = Random.Range(0, 4);
         animator = GetComponent<Animator>();
-        Debug.Log(rn);
         switch (rn)
         {
             case 0: animator.SetBool("IsBlended", true);

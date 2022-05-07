@@ -4,17 +4,16 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
-{
+{   [SerializeField]
+    public float topSpeed = 7f;
     [SerializeField]
-    float topSpeed = 7f;
+    public float moveSpeed = 20f;
     [SerializeField]
-    float moveSpeed = 20f;
+    public float jumpSpeed = 10f;
     [SerializeField]
-    float jumpSpeed = 10f;
+    public float stopJumpSpeed = 30f;
     [SerializeField]
-    float stopJumpSpeed = 30f;
-    [SerializeField]
-    private bool isGrounded = true;
+    public bool isGrounded = true;
     private Rigidbody rb;
 
     // Start is called before the first frame update
@@ -84,5 +83,5 @@ public class PlayerMovement : MonoBehaviour
             isGrounded = false;
         }
     }
-
+    
 }

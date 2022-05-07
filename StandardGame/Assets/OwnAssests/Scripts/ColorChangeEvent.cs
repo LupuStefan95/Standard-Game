@@ -22,7 +22,7 @@ public class ColorChangeEvent : MonoBehaviour
         }
     }
 
-    void BumpUp()
+    public virtual void BumpUp()
     {
         if(rb.transform.position.y< 3f)
         {
@@ -31,7 +31,7 @@ public class ColorChangeEvent : MonoBehaviour
         
     }
 
-    void ChangeColor()
+    public virtual void ChangeColor()
     {
         GetComponent<Renderer>().material.color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
     }

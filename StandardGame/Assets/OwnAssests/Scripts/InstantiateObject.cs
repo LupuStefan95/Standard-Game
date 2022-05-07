@@ -13,9 +13,6 @@ public class InstantiateObject : MonoBehaviour
     int xPos;
     int zPos;
     int yPos;
-   
-    
-
 
     // Start is called before the first frame update
     void Start()
