@@ -10,5 +10,4 @@ public class PlayerSettings : ScriptableObject {
     public float jumpSpeed = 10f;
     public float stopJumpSpeed = 30f;
     public  bool isGrounded = true;
-    public virtual void DoubleJump() { }
 }

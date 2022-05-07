@@ -26,11 +26,8 @@ public class InstantiateObject : MonoBehaviour
             xPos = Random.Range(-45, 45);
             zPos = Random.Range(-45, 45);
             yPos = Random.Range(-360, 360);
-            yield return new WaitForSeconds(delaySeconds);
-       
-        
+            yield return new WaitForSeconds(delaySeconds);       
             Instantiate(prefab, new Vector3(xPos, height, zPos), Quaternion.Euler(xPos, yPos, zPos));
-           // Instantiate(prefab, new Vector3(xPos, height, zPos), Quaternion.identity);
             yield return new WaitForSeconds(delaySeconds);
         Destroy(prefab);
                    

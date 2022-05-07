@@ -11,13 +11,13 @@ public class ColorChangeEvent : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        md += BumpUp;
+        md += ChangeColor;
     }
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            md += BumpUp;
-            md += ChangeColor;
             md?.Invoke(); // instead of checking null with if statement.
         }
     }
