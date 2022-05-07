@@ -64,7 +64,31 @@ public class BetterMovement : MonoBehaviour, ISimpleJump, ICounterJump
     public void COunterJump()
     {
         rb.AddForce(Vector3.down * playerSettings.stopJumpSpeed, ForceMode.Impulse);
-    }   
+    }
+    void OnCollisionEnter(Collision collision)
+    {
+
+        if (collision.gameObject.CompareTag("PlayerKiller"))
+        {
+            SceneManager.LoadScene(0);
+
+        }
+
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            playerSettings.isGrounded = true;
+        }
+    }
+
+
+    void OnCollisionExit(Collision collision)
+    {
+
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            playerSettings.isGrounded = false;
+        }
+    }
 }
 
 
